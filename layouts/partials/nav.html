@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" title ="Start" href="/">Rundelns samfällighetsförening</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+
+          <a class="nav-item nav-link {{ if eq .Section "rundeln-runt"}}active {{ end}}" href="/rundeln-runt" class="">Rundeln runt</a>
+          <a class="nav-item nav-link {{ if eq .Section "nyttig-information" }}active {{ end}}" href="/nyttig-information" class="">Nyttig information</a>
+          <a class="nav-item nav-link {{ if eq .Section "contact" }}active {{ end}}" href="/contact">Kontakt</a>          
+        </div>
+      </div>
+</nav>

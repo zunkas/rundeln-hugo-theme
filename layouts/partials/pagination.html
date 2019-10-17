@@ -1,0 +1,21 @@
+{{ if gt .Paginator.TotalPages 1 }}
+ 
+<nav class="navbar">
+    {{ if .Paginator.HasNext }}
+    <div>
+        <a class="" title="Next Page" href="{{ .Paginator.Next.URL }}">
+            &larr; Föregående
+        </a>
+    </div>
+    {{ end }}
+    {{ if .Paginator.HasPrev }}
+    <div class="flex-row-reverse">
+        <a  title="Previous Page" href="{{ .Paginator.Prev.URL }}">
+            Nästa &rarr;
+        </a>
+    </div>
+    
+    {{ end }}
+</nav>
+ 
+{{ end }}

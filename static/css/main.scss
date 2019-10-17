@@ -1,0 +1,74 @@
+$theme-colors: (
+  "primary": #f40,
+  "danger": #ff4136,
+  "blackish": #2b2523
+);
+
+
+$primary: #f40;
+$blackish: #2b2523;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+body{
+  background-color: #fffdfc;
+}
+
+
+.link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cms{
+  ul{
+    margin-left: 1.33rem;
+
+    >li::before{
+      content: "*";
+      left: -1.33rem;
+      position: absolute;
+      color: $primary
+    }
+  }
+
+  ol, ul{
+    margin-bottom: 1rem;
+  }
+
+  li, ol, ul{
+    position: relative;
+  }
+}
+
+
+ol, ul{
+  list-style: none;
+}
+
+li{
+  display: list-item;
+}
+
+.primary{
+  color: $primary;
+}
+
+.blackish{
+  color: $blackish;
+}
+
+
+.cover{
+    background-size: cover;
+    background-position: 50%;
+    padding: 6rem;
+}
+
+svg{
+  fill: currentColor;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  max-width: 100%;
+  max-height: 100%;
+}

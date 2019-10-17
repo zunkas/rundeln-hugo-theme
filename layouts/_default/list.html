@@ -1,0 +1,10 @@
+{{ define "main" }}
+    <div class="container">
+        <div class="row justify-content-md-center">            
+            {{ range (.Paginator).Pages.ByPublishDate.Reverse }}
+                {{ partial "card" . }}                          
+            {{ end }}                  
+        </div>
+        {{ partial "pagination" . }}
+    </div>
+{{end}}

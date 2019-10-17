@@ -1,0 +1,10 @@
+<div class="col-md-6">
+    <div class="card mb-4">
+        <div class="card-body">
+            <h5 class="card-title">{{ .Title | markdownify }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ .Date.Format "2006-01-02" }}</h6>
+            <p class="card-text">{{ .Description | markdownify }}</p>
+            <a href="{{ .RelPermalink }}" class="btn btn-primary">Läs mer</a>
+        </div>
+    </div>
+</div>
