@@ -1,11 +1,11 @@
-<header class="jumbotron jumbotron-fluid cover" style="background-image: url('{{ if .imageUrl }}{{ .imageUrl }}{{ else }}{{ .globalImageUrl }}{{ end }}')">
+<header class="jumbotron jumbotron-fluid pt-5 pb-5 cover" style="background-image: url('{{ if .imageUrl }}{{ .imageUrl }}{{ else }}{{ .globalImageUrl }}{{ end }}')">
     <div class="container">
         <div class="mb-4">
-            <h1 class="display-4 d-inline bg-primary text-white ">{{ .title | markdownify }} </h1>
+            <h1 class="d-inline bg-primary text-white ">{{ .title | markdownify }} </h1>
         </div>
         {{ if .slogan }}
             <div>
-                <p class="lead d-inline p-3 bg-primary text-white">{{ .slogan }}</p>
+                <p class="lead d-inline p-1 bg-primary text-white">{{ .slogan }}</p>
             </div>
         {{ end}}
     </div>

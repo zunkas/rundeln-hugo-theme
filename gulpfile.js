@@ -8,7 +8,6 @@ gulp.task("scss", function (){
     .pipe(sass(
       {outputStyle: "compressed"
     }))
-//    .pipe(uglify())
     .pipe(gulp.dest("static/css"))
 })
 
