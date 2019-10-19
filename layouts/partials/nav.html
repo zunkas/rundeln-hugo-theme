@@ -1,14 +1,41 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" title ="Start" href="/">Rundelns samfällighetsförening</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-
-          <a class="nav-item nav-link {{ if eq .Section "rundeln-runt"}}active {{ end}}" href="/rundeln-runt" class="">Rundeln runt</a>
+    <div class="collapse navbar-collapse flex-row-reverse" id="navbarNavDropdown">
+        
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle {{ if eq .Section "nyttig-information"}}active {{ end}}" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Nyttig information
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            {{ range (where .Site.RegularPages "Section" "nyttig-information") }}				                
+              <a class="dropdown-item" href="{{ .RelPermalink }}">{{ .Title | markdownify}}</a>         
+            {{ end }}    
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle {{ if eq .Section "samfalligheten"}}active {{ end}}" href="#" id="navbarSamfallighetenLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Samfälligheten
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarSamfallighetenLink">
+              {{ range (where .Site.RegularPages "Section" "samfalligheten") }}				                
+                <a class="dropdown-item" href="{{ .RelPermalink }}">{{ .Title | markdownify}}</a>         
+              {{ end }}    
+            </div>
+          </li>
+        <li class="nav-item">
+          <a class="nav-item nav-link {{ if eq .Section "rundeln-runt" }}active {{ end}}" href="/rundeln-runt" class="">Rundeln runt</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-item nav-link {{ if eq .Section "nyttig-information" }}active {{ end}}" href="/nyttig-information" class="">Nyttig information</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-item nav-link {{ if eq .Section "contact" }}active {{ end}}" href="/contact">Kontakt</a>          
-        </div>
-      </div>
+        </li>
+       
+      </ul> 
+    </div>
 </nav>
