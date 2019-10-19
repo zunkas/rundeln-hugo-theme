@@ -1,12 +1,12 @@
 <div class="container">
     <h3 class="">Senaste Rundeln runt</h3>    
-    <div class="row justify-content-md-center">            
+    <div class="row">            
         {{ range first 4 (where .Site.RegularPages "Section" "rundeln-runt") }}				                
             {{ partial "card" .}}
         {{ end }}            
     </div>
-    <div class="">
-        <a href="/rundeln-runt" class="btn raise">Se alla rundeln runt</a>
+    <div class="row justify-content-center">
+        <a href="/rundeln-runt" class="btn btn-primary">Se alla rundeln runt</a>
     </div>
 </div>
 
