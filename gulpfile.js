@@ -9,6 +9,7 @@ gulp.task("scss", function (){
       {outputStyle: "compressed"
     }))
     .pipe(gulp.dest("static/css"))
+    .pipe(gulp.dest("../../static/css"))
 })
 
-gulp.task("default", gulp.series("scss"));
+gulp.task("default", gulp.series("scss"));  
