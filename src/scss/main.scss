@@ -17,9 +17,13 @@ body{
   color: inherit;
 }
 
+
+
+
 .cms{
   ul{
     margin-left: 1.33rem;
+    list-style: none;
 
     >li::before{
       content: "*";
@@ -27,6 +31,10 @@ body{
       position: absolute;
       color: $primary
     }
+  }
+
+  ol {
+    list-style: decimal;
   }
 
   ol, ul{
