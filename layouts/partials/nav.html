@@ -20,13 +20,13 @@
                 
               <div class="dropdown-menu" aria-labelledby="{{ .Name }}">
                 {{ range .Pages.ByWeight }}	      
-                  <a class="dropdown-item {{ if eq $currentPage .}}active{{end}}" href="{{ .URL }}">{{ .Name}}</a>         
+                  <a class="dropdown-item {{ if eq $currentPage .}}active{{end}}" href="{{ .Permalink }}">{{ .Name}}</a>         
                 {{ end }}    
               </div>
-            </li>
+            </li> 
           {{ else }}
             <li class="nav-item">
-              <a class="nav-item nav-link {{ if eq $currentPage .}}active{{end}}" href="{{ .URL }}">
+              <a class="nav-item nav-link {{ if eq $currentPage .}}active{{end}}" href="{{ .Permalink }}">
                 {{ .Name }}
               </a>
             </li>

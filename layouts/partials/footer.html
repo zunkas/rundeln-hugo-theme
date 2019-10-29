@@ -5,9 +5,9 @@
                         <h3 class="f4 b lh-title mb1 primary">Rundelns samfällighetsförening</h3>
                         <ul class="mb6 m-0 p-0">
                             <li><a href="/" class="link">Start</a></li>
-                            <li><a href="/rundeln-runt" class="link">Rundeln runt</a></li>
-                            <li><a href="/nyttig-information" class="link">Nyttig information</a></li>
-                            <li><a href="/contact" class="link">Kontakt</a></li>
+                            {{ range .Site.Menus.main  }}
+                                <li><a href="{{.URL}}" class="link">{{.Name}}</a></li>
+                            {{end}}        
                         </ul>                    
                     </div>
                     <div class="col-md-5 mb-4">                        
