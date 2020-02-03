@@ -4,7 +4,8 @@
   "description": "rundeln-theme",
   "main": "index.js",
   "dependencies": {
-    "bootstrap": "^4.3.1"
+    "bootstrap": "^4.3.1",
+    "node": "^13.7.0"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
